@@ -12,9 +12,9 @@ services:
       - '8929:8929'
       - '2289:22'
     volumes:
-      - "C:/projects/gitlab/config:/etc/gitlab"
-      - "C:/projects/gitlab/logs:/var/log/gitlab"
-      - "C:/projects/gitlab/data:/var/opt/gitlab"
+      - "./gitlab/config:/etc/gitlab"
+      - "./gitlab/logs:/var/log/gitlab"
+      - "./gitlab/data:/var/opt/gitlab"
     shm_size: '256m'
   
   gitlab-runner:
@@ -22,8 +22,8 @@ services:
     image: gitlab/gitlab-runner:latest
     restart: always
     volumes:
-      - "C:/projects/gitlab/runner-config:/etc/gitlab-runner"
       - "/var/run/docker.sock:/var/run/docker.sock"
-      - "C:/projects/gitlab/runner-builds:/builds"
-      - "C:/projects/gitlab/runner-cache:/cache"
-      - "C:/projects/gitlab/runner-scripts:/scripts"
+      - "./runner/config:/etc/gitlab-runner"
+      - "./runner/builds:/builds"
+      - "./runner/cache:/cache"
+      - "./runner/scripts:/scripts"
