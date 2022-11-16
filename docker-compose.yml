@@ -23,7 +23,7 @@ services:
     restart: always
     volumes:
       - "/var/run/docker.sock:/var/run/docker.sock"
-      - "./runner/config:/etc/gitlab-runner"
       - "./runner/builds:/builds"
       - "./runner/cache:/cache"
+      - "./runner/config:/etc/gitlab-runner"
       - "./runner/scripts:/scripts"
