@@ -1,0 +1,1 @@
+This is a simple project that will be used to perform a build action on so we can proof that we can use WASM as a Gitlab runner executor.

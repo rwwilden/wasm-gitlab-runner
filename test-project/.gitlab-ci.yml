@@ -1,0 +1,5 @@
+job:
+  tags:
+    - wasm
+  script:
+    - ls
