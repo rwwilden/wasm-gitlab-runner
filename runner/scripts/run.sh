@@ -1,2 +1,2 @@
 #!/bin/bash 
-echo "Hello: $0 $1 $2 $3"
+echo "Arguments : $0 $1 $2 $3"
